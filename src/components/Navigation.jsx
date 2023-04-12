@@ -5,6 +5,7 @@ import React from "react";
 import axios from "axios";
 
 
+
 const fetchCategorias = async () => {
   try {
     const respuesta = await axios.get(
@@ -59,15 +60,11 @@ const Navigation=async ()=> {
               <ul className="dropdown-menu dropdown-menu-columns-2" aria-labelledby="navbarDropdown">
   <div className="row">
     <div className="col">
-      {categorias.genres.slice(0,10).map((c)=>(
-        <li><a className="dropdown-item" >{c.name}</a></li>
+      {categorias.genres.map((c)=>(
+        <li><a className="dropdown-item" ><Link href={`/PorGeneros/${c.id}`}>{c.name}</Link></a></li>
       ))}
     </div>
-    <div className="col">
-      {categorias.genres.slice(10,20).map((c)=>(
-        <li><a className="dropdown-item" >{c.name}</a></li>
-      ))}
-    </div>
+    
   </div>
 </ul>
 
