@@ -61,7 +61,7 @@ const Navigation=async ()=> {
   <div className="row">
     <div className="col">
       {categorias.genres.map((c)=>(
-        <li><a className="dropdown-item" ><Link href={`/PorGeneros/${c.id}`}>{c.name}</Link></a></li>
+        <li key={c.id}><a className="dropdown-item" ><Link href={`/PorGeneros/${c.id}`}>{c.name}</Link></a></li>
       ))}
     </div>
     
