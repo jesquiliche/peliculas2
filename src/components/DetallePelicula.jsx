@@ -79,11 +79,30 @@ const ObtenerDetalle = async ({ id }) => {
                     {credits.name}
                   </td>
                   <td width="100px">
-                    {videoUrl && (
+                {/*    {videoUrl && (
                     <div>
                       <iframe
-                        width="560"
-                        height="315"
+                        width="660"
+                        height="415"
+                        src={videoUrl}
+                        title="Trailer de la película"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        style={{ borderRadius: "10px" }}
+                      ></iframe>
+                </div>)} */}
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div className="row mt-4">
+          {videoUrl && (
+                    <div className="mx-auto">
+                      <iframe
+                        width="1250"
+                        height="700"
                         src={videoUrl}
                         title="Trailer de la película"
                         frameborder="0"
@@ -92,10 +111,6 @@ const ObtenerDetalle = async ({ id }) => {
                         style={{ borderRadius: "10px" }}
                       ></iframe>
                     </div>)}
-                  </td>
-                </tr>
-              </table>
-            </div>
           </div>
         </div>
       </div>
