@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 
 const fetchPeliculas = async () => {
   try {
@@ -35,13 +36,15 @@ const CargarPeliculas = async () => {
           <>
             <div className="card card-portada bg-white  col-lg-2 m-2 mt-3 px-1">
               <div className="card-header text-center">
+              <Link href={`/Detalle/${p.id}`}>
                 <img
                   src={`https://image.tmdb.org/t/p/w154${p.poster_path}`}
                   alt={p.title}
                 />
+                </Link>
               </div>
               <div className="card-body mx-auto">
-                <h6>{p.title}</h6>
+                <h6><Link href={`/Detalle/${p.id}`}>{p.title}</Link></h6>
               </div>
             </div>
           </>
