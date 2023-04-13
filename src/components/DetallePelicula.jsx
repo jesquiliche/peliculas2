@@ -16,7 +16,9 @@ const fetchMovieDetails = async (movieId) => {
 
     return response.data;
   } catch (error) {
+    
     console.error(error);
+    return null;
   }
 };
 
@@ -39,7 +41,12 @@ const ObtenerDetalle = async ({ id }) => {
   console.log(movieDetails);
   const credits = await getMovieCredits(id);
   // Obtener la URL del primer video de la lista
-  const videoUrl = `https://www.youtube.com/embed/${movieDetails.videos.results[0].key}`;
+  let videoUrl=null;
+  console.log()
+  if (movieDetails.videos.results.length>0) {
+    videoUrl = `https://www.youtube.com/embed/${movieDetails.videos.results[0].key}`;
+  }
+ 
     console.log(videoUrl);
   return (
     <>
@@ -72,6 +79,7 @@ const ObtenerDetalle = async ({ id }) => {
                     {credits.name}
                   </td>
                   <td width="100px">
+                    {videoUrl && (
                     <div>
                       <iframe
                         width="560"
@@ -83,7 +91,7 @@ const ObtenerDetalle = async ({ id }) => {
                         allowfullscreen
                         style={{ borderRadius: "10px" }}
                       ></iframe>
-                    </div>
+                    </div>)}
                   </td>
                 </tr>
               </table>

@@ -63,6 +63,10 @@ body {
 h4 {
   color:#0f010140;
 }
+.card {
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
 .card-portada {
   position: absolute;
   z-index: 0;
