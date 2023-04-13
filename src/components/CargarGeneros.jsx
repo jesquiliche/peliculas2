@@ -44,7 +44,7 @@ const obtenerNombreCategoria = async (id) => {
 const CargarGeneros = async ({ id }) => {
   const peliculas = await fetchPeliculas(id);
   const nombre = await obtenerNombreCategoria(id);
-  console.log(nombre);
+
   return <ListaPeliculas data={peliculas.results} />;
 };
 

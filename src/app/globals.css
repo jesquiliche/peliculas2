@@ -77,6 +77,18 @@ h4 {
   transition: transform 0.3s ease; 
 }
 
+.card-detalle {
+  border-radius: 15px;
+  color: black;
+  font-size: large;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+  
+}
+img {
+  border-radius: 10px;
+}
+
+
 .card:hover {
   transform: scale(1.1);
 }

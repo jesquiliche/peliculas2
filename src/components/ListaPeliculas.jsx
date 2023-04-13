@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ListaPeliculas = async ({data,title}) => {
     
   
@@ -13,7 +15,7 @@ const ListaPeliculas = async ({data,title}) => {
                 <img src={`https://image.tmdb.org/t/p/w154${p.poster_path}`} alt={p.title} />
               </div>
               <div className="card-body mx-auto">
-                <h6>{p.title}</h6>
+                <h6><Link href={`/Detalle/${p.id}`}>{p.title}</Link></h6>
               </div>
             </div>
           ))}
