@@ -21,7 +21,7 @@ const fetchCategorias = async () => {
 
 const Navigation = async () => {
   const categorias = await fetchCategorias();
-  console.log(categorias);
+  
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
