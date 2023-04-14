@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Detalle({params}) {
     const {id}=params;
-    console.log(id);
+    
   return (
     <main className={styles.main}>
       
